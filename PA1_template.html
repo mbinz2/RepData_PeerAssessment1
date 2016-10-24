@@ -123,16 +123,9 @@ $(document).ready(function () {
 <h2>Loading and preprocessing the data</h2>
 <p>The first step here is to load the necessary packaages that will be used throughout and then download/unzip the data before loading into R. The last step here is removing the na cases from the dataset for the first few questions.</p>
 <pre class="r"><code>library(ggplot2)
-library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: 'dplyr'</code></pre>
-<pre><code>## The following objects are masked from 'package:stats':
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>download.file(&quot;https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip&quot;,&quot;activity.zip&quot;)
+library(dplyr)
+
+download.file(&quot;https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip&quot;,&quot;activity.zip&quot;)
 activity &lt;- read.csv(unzip(&quot;activity.zip&quot;))
 ActClean &lt;- activity[complete.cases(activity),]</code></pre>
 </div>

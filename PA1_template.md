@@ -9,26 +9,7 @@ removing the na cases from the dataset for the first few questions.
 ```r
 library(ggplot2)
 library(dplyr)
-```
 
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 download.file("https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip","activity.zip")
 activity <- read.csv(unzip("activity.zip"))
 ActClean <- activity[complete.cases(activity),]
